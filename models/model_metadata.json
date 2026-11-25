@@ -1,0 +1,33 @@
+{
+  "model_name": "BoviSense Early Fever Predictor",
+  "version": "1.0.0",
+  "target_audience": "Veterinarios y Ganaderos de Bovinova",
+  "framework": "ONNX Opset 12",
+  "input_tensor": "float_input",
+  "features_order": [
+    "temperature",
+    "heart_rate",
+    "temp_slope_3h",
+    "hr_slope_3h",
+    "temp_variability_3h",
+    "thi_index"
+  ],
+  "feature_importances": {
+    "temperature": 0.04890743769846388,
+    "heart_rate": 0.14542858422585536,
+    "temp_slope_3h": 0.13912535281759336,
+    "hr_slope_3h": 0.06839041701731705,
+    "temp_variability_3h": 0.335710231749282,
+    "thi_index": 0.2624379764914884
+  },
+  "thresholds": {
+    "normal_max_risk": 0.35,
+    "moderate_max_risk": 0.7,
+    "high_risk_threshold": 0.7
+  },
+  "scientific_sources": [
+    "Zenodo DOI: 10.5281/zenodo.15746212 (Italian Journal of Animal Science, 2024)",
+    "NeurIPS: MmCows Multimodal Dataset for Dairy Cattle Monitoring",
+    "Mendeley Data: Machine Learning-Based Core Body Temperature Prediction in Dairy Calves"
+  ]
+}
